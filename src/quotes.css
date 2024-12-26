@@ -8,7 +8,7 @@ button{
     margin: 10px;
 }
 
-div#quote{
+div#text{
     border: 2px white;
     border-style: dashed;
     padding: 5px;
@@ -21,7 +21,7 @@ div#quote{
     color: black;
 }
 
-div#quote.filled{
+div#text.filled{
     border: 2px white;
     border-style: dashed;
     padding: 5px;

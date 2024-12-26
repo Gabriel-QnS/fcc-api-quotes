@@ -75,7 +75,7 @@ async function quoteCall(category){
     return (
     <main id="quote-box" >
         <div id="category" category="life">Have a quote on the topic of <OptionSelection handler={setCategory} /></div>
-        <div id="quote" className={`quote ${header? "filled" : ""}`}>{header? header : 'Your quote will show up here'}</div>
+        <div id="text" className={`quote ${header? "filled" : ""}`}>{header? header : 'Your quote will show up here'}</div>
         <div id="author" className="author">{author}</div>
         <button onClick={handleCall}>Get a Quote</button>
         <button onClick={emptyQuote}>Empty</button>
