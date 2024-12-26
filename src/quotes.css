@@ -1,0 +1,49 @@
+#quote-box{
+    text-align: center;
+    padding: 10px;
+}
+
+button{
+    padding: 2px;
+    margin: 10px;
+}
+
+div#quote{
+    border: 2px white;
+    border-style: dashed;
+    padding: 5px;
+    margin: 10px 0;
+    transition: 1s all ease-in-out;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border: 0;
+    color: black;
+}
+
+div#quote.filled{
+    border: 2px white;
+    border-style: dashed;
+    padding: 5px;
+    margin: 10px 0;
+    transition: 1s all ease-in-out;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    border: 5px dashed white;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+div#author{
+    font-size: 0.7em;
+    text-align: left;
+    padding: 2px;
+    margin: 2px;
+}
+
+h1#title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
