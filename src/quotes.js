@@ -25,8 +25,10 @@ function QuoteCaller() {
   const [header, setHeader] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('life');
+  const [fetching, setFetching] = useState(false)
 
   const fetchQuote = async () => { 
+    setFetching(true)
     try {
       const apiKey = 'AaqLgv88Gb+HBi1ZCCXSqQ==DszVMAXwqrIlRHp6';
       const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
@@ -47,6 +49,7 @@ function QuoteCaller() {
       if (data) {
         setHeader(`"${data[0].quote}"`);
         setAuthor(`By: ${data[0].author}`);
+        setFetching(false); console.log('Fetching Done')
       } else {
         console.log('Falsey data');
       }
@@ -56,8 +59,8 @@ function QuoteCaller() {
   };
 
   useEffect(() => {
-    fetchQuote(); 
-  }, []); 
+    fetchQuote()
+  }, [category]); 
 
   const handleCall = () => { 
     fetchQuote(); // Call the fetchQuote function when the "Get Quote" button is clicked
@@ -70,14 +73,16 @@ function QuoteCaller() {
         <OptionSelection handler={setCategory} />
       </div>
       <div id="text" className={`quote ${header ? 'filled' : ''}`}>
-        {header ? header : 'Your quote will show up here'}
+        {fetching ? 'Loading...' : header}
       </div>
       <div id="author" className="author">
-        {author}
+        {fetching ? 'Loading...' : author}
       </div>
+      {header && ( // Only render the button if a quote has been fetched
       <button id="new-quote" onClick={handleCall}>
         Get a Quote
       </button>
+      )}
       {/* ... rest of the JSX (unchanged) */}
       <span>Share:</span>
       <button id="tweet-quote">
