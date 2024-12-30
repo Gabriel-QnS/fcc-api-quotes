@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
+import icon from "./twitter.png"
 
 function OptionSelection(props){//child
   const [category, setCategory] = useState('life');
@@ -26,12 +27,16 @@ const [header, setHeader] = useState('');
 const [author, setAuthor] = useState('');
 const [extra, setExtra] = useState('');
 const [category, setCategory] = useState('life') // default
+const [loaded,setLoaded] = useState(false);
+
+
 
 async function quoteCall(category){
     const apiKey = 'AaqLgv88Gb+HBi1ZCCXSqQ==DszVMAXwqrIlRHp6';
     const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
 
     console.log('API URL USED: ',apiUrl)
+
         
     try {
         const response = await fetch(apiUrl, {
@@ -63,22 +68,17 @@ async function quoteCall(category){
       function handleCall(){
         quoteCall(category);
       };
-
-      function checkState(){
-        console.log(category)
-      }
-
-      function emptyQuote(){
-        
-      }
+      
 
     return (
     <main id="quote-box" >
         <div id="category" category="life">Get a random quote from history in your selected topic: <OptionSelection handler={setCategory} /></div>
         <div id="text" className={`quote ${header? "filled" : ""}`}>{header? header : 'Your quote will show up here'}</div>
         <div id="author" className="author">{author}</div>
-        <button onClick={handleCall}>Get a Quote</button>
-        <button onClick={emptyQuote}>Empty</button>
+        <button id="new-quote" onClick={handleCall}>Get a Quote</button>
+        {/* <button onClick={emptyQuote}>Empty</button> */}
+        <span>Share:</span>
+        <button id="tweet-quote"><i><img id="twitter-icon" src={icon} alt="X-Twitter Icon" /></i></button>
     </main>
 )
 

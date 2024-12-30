@@ -6,14 +6,14 @@
 button{
     padding: 2px;
     margin: 10px;
+    
 }
 
 div#text{
-    border: 2px white;
+    border: 2px black;
     border-style: dashed;
     padding: 5px;
     margin: 10px 0;
-    transition: 1s all ease-in-out;
     width: 0;
     height: 0;
     overflow: hidden;
@@ -22,16 +22,15 @@ div#text{
 }
 
 div#text.filled{
-    border: 2px white;
+    border: 2px black;
     border-style: dashed;
     padding: 5px;
-    margin: 10px 0;
-    transition: 1s all ease-in-out;
+    margin: 10px auto;
     width: fit-content;
     height: fit-content;
     overflow: hidden;
-    border: 5px dashed white;
-    color: white;
+    border: 5px dashed black;
+    color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
     font-size: 0.9em;
@@ -46,4 +45,9 @@ div#author{
 
 h1#title{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#twitter-icon{
+    max-height: 12px;
+    color: red;
 }

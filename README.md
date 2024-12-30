@@ -11,14 +11,19 @@ User Story #1: I can see a wrapper element with a corresponding id="quote-box".
 # ADDED
 
 User Story #2: Within #quote-box, I can see an element with a corresponding id="text".
+# ADDED
 
 User Story #3: Within #quote-box, I can see an element with a corresponding id="author".
+# ADDED
 
-User Story #4: Within #quote-box, I can see a clickable element with a corresponding id="new-quote".
+User Story #4: Within #quote-box, I can see a clickable element with a corresponding id="new-quote"
+# ADDED
 
 User Story #5: Within #quote-box, I can see a clickable a element with a corresponding id="tweet-quote".
+# ADDED
 
-User Story #6: On first load, my quote machine displays a random quote in the element with id="text".
+User Story #6: On first load, my quote machine displays a random quote in the element with id="text"
+
 
 User Story #7: On first load, my quote machine displays the random quote's author in the element with id="author".
 
