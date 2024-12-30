@@ -27,7 +27,6 @@ const [header, setHeader] = useState('');
 const [author, setAuthor] = useState('');
 const [extra, setExtra] = useState('');
 const [category, setCategory] = useState('life') // default
-const [loaded,setLoaded] = useState(false);
 
 
 
