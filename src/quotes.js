@@ -68,6 +68,11 @@ function QuoteCaller() {
     fetchQuote(); // Call the fetchQuote function when the "Get Quote" button is clicked
   };
 
+  const handleTwitter = () => {
+    const tweet = `${header} ${author}`
+    window.open(`https://twitter.com/intent/tweet?text=${tweet}`, '_blank');
+  }
+
   return (
     <main id="quote-box">
       <div id="category" category="life">
@@ -89,10 +94,13 @@ function QuoteCaller() {
       </button>
       )}
       {/* ... rest of the JSX (unchanged) */}
-      <span>Share:</span>
-      <button id="tweet-quote">
-        <a href="_blank" ><img id="twitter-icon" src={icon} alt="X-Twitter Icon" /></a>
+      <span>Share on:</span>
+      <a onClick={handleTwitter} href="" >
+        <button id="tweet-quote">
+        <img id="twitter-icon" src={icon} alt="X-Twitter Icon" />
+        {/* Twitter: function() { window.open('https://twitter.com/intent/tweet?text=Hello%20World', '_blank'); */}
       </button>
+      </a>
     </main>
   );
 

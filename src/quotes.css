@@ -54,6 +54,10 @@ h1#title{
     color: red;
 }
 
+#tweet-quote{
+    width: 100px;
+}
+
 select {
     margin: auto 10px
 }

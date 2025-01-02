@@ -29,8 +29,10 @@ User Story #7: On first load, my quote machine displays the random quote's autho
 # ADDED
 
 User Story #8: When the #new-quote button is clicked, my quote machine should fetch a new quote and display it in the #text element.
+# ADDED
 
 User Story #9: My quote machine should fetch the new quote's author when the #new-quote button is clicked and display it in the #author element.
+# ADDED
 
 User Story #10: I can tweet the current quote by clicking on the #tweet-quote a element. This a element should include the "twitter.com/intent/tweet" path in its href attribute to tweet the current quote.
 
