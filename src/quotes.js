@@ -31,7 +31,7 @@ function QuoteCaller() {
     setFetching(true)
     try {
       const apiKey = 'AaqLgv88Gb+HBi1ZCCXSqQ==DszVMAXwqrIlRHp6';
-      const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
+      const apiUrl = `https://api.api-ninjas.com/v1/quotes=${category}`;
       console.log('API URL USED:', apiUrl);
 
       const response = await fetch(apiUrl, {

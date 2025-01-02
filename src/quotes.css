@@ -4,14 +4,12 @@
 }
 
 button{
-    padding: 2px;
+    padding: 5px;
     margin: 10px;
     
 }
 
 div#text{
-    border: 2px black;
-    border-style: dashed;
     padding: 5px;
     margin: 10px auto;
     width: fit-content;
@@ -27,14 +25,13 @@ div#text{
 }
 
 div#text.filled{
-    border: 2px black;
-    border-style: dashed;
+    background-color: rgba(29, 28, 29, 0.25);
     padding: 5px;
     margin: 10px auto;
     width: fit-content;
     height: fit-content;
     overflow: hidden;
-    border: 5px dashed black;
+    border: 2px inset black;
     color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
@@ -43,9 +40,9 @@ div#text.filled{
 
 div#author{
     font-size: 0.7em;
-    text-align: left;
+    text-align: center;
     padding: 2px;
-    margin: 2px;
+    margin: 2px auto;
 }
 
 h1#title{
@@ -55,4 +52,8 @@ h1#title{
 #twitter-icon{
     max-height: 12px;
     color: red;
+}
+
+select {
+    margin: auto 10px
 }
