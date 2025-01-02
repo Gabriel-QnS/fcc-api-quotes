@@ -38,7 +38,7 @@ div#text.filled{
     font-size: 0.9em;
 }
 
-div#author{
+div#author, #category{
     font-size: 0.7em;
     text-align: center;
     padding: 2px;

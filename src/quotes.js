@@ -24,14 +24,14 @@ function OptionSelection(props){//child
 function QuoteCaller() {
   const [header, setHeader] = useState('');
   const [author, setAuthor] = useState('');
-  const [category, setCategory] = useState('life');
+  const [category, setCategory] = useState('');
   const [fetching, setFetching] = useState(false)
 
   const fetchQuote = async () => { 
     setFetching(true)
     try {
       const apiKey = 'AaqLgv88Gb+HBi1ZCCXSqQ==DszVMAXwqrIlRHp6';
-      const apiUrl = `https://api.api-ninjas.com/v1/quotes=${category}`;
+      const apiUrl = `https://api.api-ninjas.com/v1/quotes`; // API source updated their plans. Category is no longer a free feature, most of the code related to this is being commented out
       console.log('API URL USED:', apiUrl);
 
       const response = await fetch(apiUrl, {
@@ -49,6 +49,8 @@ function QuoteCaller() {
       if (data) {
         setHeader(`"${data[0].quote}"`);
         setAuthor(`By: ${data[0].author}`);
+        const formatedCategory = data[0].category.toUpperCase()
+        setCategory(`A quote on the topic of: ${formatedCategory}`);
         setFetching(false); console.log('Fetching Done')
       } else {
         console.log('Falsey data');
@@ -60,7 +62,7 @@ function QuoteCaller() {
 
   useEffect(() => {
     fetchQuote()
-  }, [category]); 
+  }, []); 
 
   const handleCall = () => { 
     fetchQuote(); // Call the fetchQuote function when the "Get Quote" button is clicked
@@ -69,14 +71,17 @@ function QuoteCaller() {
   return (
     <main id="quote-box">
       <div id="category" category="life">
-        Get a random quote from history in your selected topic:
-        <OptionSelection handler={setCategory} />
+        Get a random quote from a famous individual from history
+        {/* <OptionSelection handler={setCategory} /> */}
       </div>
       <div id="text" className={`quote ${header ? 'filled' : ''}`}>
-        {fetching ? 'Loading...' : header}
+        {fetching ? 'Loading quote...' : header}
       </div>
       <div id="author" className="author">
-        {fetching ? 'Loading...' : author}
+        {fetching ? 'Loading name...' : author}
+      </div>
+      <div id="category" className="category">
+        {fetching ? 'Loading type...' : category}
       </div>
       {header && ( // Only render the button if a quote has been fetched
       <button id="new-quote" onClick={handleCall}>
