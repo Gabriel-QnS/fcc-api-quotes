@@ -21,7 +21,7 @@ function OptionSelection(props){//child
     )
 }
 
-function QuoteCaller() {
+function QuoteCaller({colorer}) {
   const [header, setHeader] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
@@ -51,7 +51,9 @@ function QuoteCaller() {
         setAuthor(`By: ${data[0].author}`);
         const formatedCategory = data[0].category.toUpperCase()
         setCategory(`on the topic of "${formatedCategory}"`);
-        setFetching(false); console.log('Fetching Done')
+        setFetching(false); console.log('Fetching Done');
+        const changeColors = colorer;
+        changeColors()
       } else {
         console.log('Falsey data');
       }

@@ -1,5 +1,10 @@
 @import url('./quotes.css');
 
+:root {
+  --primary-color: #007bff; /* Default value */
+  --font-size: 16px;
+}
+
 .App {
   text-align: center;
 }
