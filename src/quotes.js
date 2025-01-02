@@ -71,7 +71,7 @@ function QuoteCaller() {
   return (
     <main id="quote-box">
       <div id="category" category="life">
-        Get a random quote from a famous individual from history
+        Get a quote from a famous historical figure
         {/* <OptionSelection handler={setCategory} /> */}
       </div>
       <div id="text" className={`quote ${header ? 'filled' : ''}`}>
