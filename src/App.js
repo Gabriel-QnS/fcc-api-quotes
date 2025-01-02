@@ -7,12 +7,13 @@ function App() {
 
   const [color, setColor] = useState();
 
-  function generateDarkRGBColor() {
-    const maxDarkValue = 100; // Adjust this value to control how dark you want the colors
+  function generateLightRGBColor() {
+    const minLightValue = 150; // Adjust this value to control how light you want the colors
+    const maxLightValue = 255;
   
-    const r = Math.floor(Math.random() * maxDarkValue);
-    const g = Math.floor(Math.random() * maxDarkValue);
-    const b = Math.floor(Math.random() * maxDarkValue);
+    const r = Math.floor(Math.random() * (maxLightValue - minLightValue + 1)) + minLightValue;
+    const g = Math.floor(Math.random() * (maxLightValue - minLightValue + 1)) + minLightValue;
+    const b = Math.floor(Math.random() * (maxLightValue - minLightValue + 1)) + minLightValue;
   
     return `rgb(${r}, ${g}, ${b})`;
   }
@@ -22,7 +23,7 @@ function App() {
   }, [color]); 
 
   const handleColorChange = () => {
-    setColor(generateDarkRGBColor()); // Update the color
+    setColor(generateLightRGBColor()); // Update the color
   };
 
 
