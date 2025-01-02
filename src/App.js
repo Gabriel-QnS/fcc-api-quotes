@@ -3,6 +3,11 @@ import './App.css'
 
 
 function App() {
+
+  function recolorThis(){
+    
+  }
+
   return (
     <div className="App">
       <h1>Quotes from the Famous</h1>
