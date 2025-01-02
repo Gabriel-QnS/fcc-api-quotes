@@ -39,7 +39,7 @@ div#text.filled{
 }
 
 div#author, #category{
-    font-size: 0.7em;
+    font-size: 1em;
     text-align: center;
     padding: 2px;
     margin: 2px auto;

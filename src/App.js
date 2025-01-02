@@ -5,7 +5,7 @@ import './App.css'
 function App() {
   return (
     <div className="App">
-      <h1>Quote Fetcher</h1>
+      <h1>Quotes from the Famous</h1>
       <main>
         <QuoteCaller />
       </main>

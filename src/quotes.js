@@ -50,7 +50,7 @@ function QuoteCaller() {
         setHeader(`"${data[0].quote}"`);
         setAuthor(`By: ${data[0].author}`);
         const formatedCategory = data[0].category.toUpperCase()
-        setCategory(`A quote on the topic of: ${formatedCategory}`);
+        setCategory(`on the topic of "${formatedCategory}"`);
         setFetching(false); console.log('Fetching Done')
       } else {
         console.log('Falsey data');
@@ -83,17 +83,18 @@ function QuoteCaller() {
         {fetching ? 'Loading quote...' : header}
       </div>
       <div id="author" className="author">
-        {fetching ? 'Loading name...' : author}
+        <b>{fetching ? 'Loading name...' : author}</b>,<br></br>{fetching ? 'Loading type...' : category}
       </div>
       <div id="category" className="category">
-        {fetching ? 'Loading type...' : category}
+        
       </div>
       {header && ( // Only render the button if a quote has been fetched
       <button id="new-quote" onClick={handleCall}>
-        Get a Quote
+        Get a new quote
       </button>
       )}
       {/* ... rest of the JSX (unchanged) */}
+      <div>
       <span>Share on:</span>
       <a onClick={handleTwitter} href="" >
         <button id="tweet-quote">
@@ -101,6 +102,7 @@ function QuoteCaller() {
         {/* Twitter: function() { window.open('https://twitter.com/intent/tweet?text=Hello%20World', '_blank'); */}
       </button>
       </a>
+      </div>
     </main>
   );
 
