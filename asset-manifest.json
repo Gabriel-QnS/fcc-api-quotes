@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/fcc-api-quotes/static/css/main.1cbebdbf.css",
+    "main.js": "/fcc-api-quotes/static/js/main.668aba0a.js",
+    "static/media/twitter.png": "/fcc-api-quotes/static/media/twitter.e4f83bef4191a65e9c7d.png",
+    "index.html": "/fcc-api-quotes/index.html",
+    "main.1cbebdbf.css.map": "/fcc-api-quotes/static/css/main.1cbebdbf.css.map",
+    "main.668aba0a.js.map": "/fcc-api-quotes/static/js/main.668aba0a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1cbebdbf.css",
+    "static/js/main.668aba0a.js"
+  ]
+}
