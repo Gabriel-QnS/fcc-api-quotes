@@ -23,7 +23,7 @@
       "react-app",
       "react-app/jest"
     ]
-  },"homepage": "https://Gabriel-QnS.github.io/<repository-name>",
+  },"homepage": "https://Gabriel-QnS.github.io/fcc-api-quotes",
   "browserslist": {
     "production": [
       ">0.2%",
